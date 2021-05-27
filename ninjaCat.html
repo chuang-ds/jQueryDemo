@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>jQuery Demo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('img').click(function(){
+                    var tmp = $(this).attr("src");
+                    $(this).attr("src", $(this).attr("data-src2"));
+                    $(this).attr("data-src2", tmp);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div class="mainBody">
+                <p>Click on sections of images below to toggle them</p>
+                <img src="img/ninja0.png" alt="0" data-src2="img/cat0.png">
+                <img src="img/ninja1.png" alt="1" data-src2="img/cat1.png">
+                <img src="img/ninja2.png" alt="2" data-src2="img/cat2.png">
+                <img src="img/ninja3.png" alt="3" data-src2="img/cat3.png">
+                <img src="img/ninja4.png" alt="4" data-src2="img/cat4.png">
+            </div>
+        </div>
+    </body>
+</html>
